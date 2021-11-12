@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     // print the program title
     printf("%s", program_title);
     printf("press any key to go into testing mode...");
-    getch();
+    _getch();
 
     // Handle the user interaction
     console_task(&g_ring_buffer);

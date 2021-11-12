@@ -1,4 +1,4 @@
-#include "trace.h"
+#include "print_buffer.h"
 
 
 void print_buffer(ring_buffer_t *pbuff)

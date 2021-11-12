@@ -1,5 +1,5 @@
-#ifndef TRACE_H
-#define TRACE_H
+#ifndef PRINT_BUFFER_H
+#define PRINT_BUFFER_H
 
 #include "ring_buffer.h"
 
@@ -17,4 +17,4 @@
 
 
 
-#endif // TRACE_H
+#endif // PRINT_BUFFER_H

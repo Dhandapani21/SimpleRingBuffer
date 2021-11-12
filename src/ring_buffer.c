@@ -1,5 +1,32 @@
+/**
+  @file ring_buffer.c
+  @internal
+  Author: Dhandapani Rajabathar
+  Date: 10/oct/2021
+  @endinternal
+  @brief generic ring buffer implementation
+
+  Detailed Description:
+  this ring buffer can be used on both embedded and desktop software.
+
+
+  */
+
 #include "ring_buffer.h"
 
+
+/** @addtogroup ring_buffer RingBuffer
+ *  @{
+ */
+
+
+/**
+ *  @brief buffer_put_data
+ *  @param buff
+ *  @return status
+ *
+ *
+*/
 
 bool buffer_full(ring_buffer_t *buff)
 {
@@ -11,6 +38,8 @@ bool buffer_full(ring_buffer_t *buff)
     return false;
 }
 
+
+
 bool buffer_empty(ring_buffer_t *buff)
 {
     if(buff->buff_count == 0)
@@ -21,6 +50,12 @@ bool buffer_empty(ring_buffer_t *buff)
     return false;
 }
 
+/**
+ *
+ *   buffer_put_data
+ *
+ *
+*/
 int buffer_put_data(ring_buffer_t *buff, uint8_t *in_data, uint32_t count)
 {
     uint32_t i;
@@ -52,6 +87,12 @@ int buffer_put_data(ring_buffer_t *buff, uint8_t *in_data, uint32_t count)
     return 0;
 }
 
+/**
+ *
+ *  @brief buffer empty
+ *
+ *
+*/
 int buffer_get_data(ring_buffer_t *buff, uint8_t *out_data, uint32_t count)
 {
     uint32_t i, actual_bytes_read=0;
@@ -91,6 +132,12 @@ int buffer_get_data(ring_buffer_t *buff, uint8_t *out_data, uint32_t count)
     return 0;
 }
 
+/**
+ *
+ *  @brief buffer empty
+ *
+ *
+*/
 int buffer_put_byte(ring_buffer_t *buff, uint8_t *in_byte)
 {
     if(buff == NULL)  return BUFFER_ERROR;
@@ -113,6 +160,13 @@ int buffer_put_byte(ring_buffer_t *buff, uint8_t *in_byte)
 
     return 0;
 }
+
+/**
+ *
+ *  @brief buffer empty
+ *
+ *
+*/
 int buffer_get_byte(ring_buffer_t *buff, uint8_t *out_byte)
 {
     if(buff == NULL)  return BUFFER_ERROR;
@@ -137,11 +191,23 @@ int buffer_get_byte(ring_buffer_t *buff, uint8_t *out_byte)
     return 0;
 }
 
+/**
+ *
+ *  @brief buffer empty
+ *
+ *
+*/
 uint32_t buffer_remaining_bytes(ring_buffer_t *buff)
 {
     return buff->buff_count;
 }
 
+/**
+ *
+ *  @brief buffer empty
+ *
+ *
+*/
 int buffer_flush(ring_buffer_t *buff)
 {
     if(buff == NULL) return BUFFER_ERROR;
@@ -154,6 +220,12 @@ int buffer_flush(ring_buffer_t *buff)
     return 0;
 }
 
+/**
+ *
+ *  @brief buffer empty
+ *
+ *
+*/
 int buffer_init(ring_buffer_t *buff, uint8_t *data_ptr, uint32_t size)
 {
     buff->buff_data = data_ptr;
@@ -164,3 +236,5 @@ int buffer_init(ring_buffer_t *buff, uint8_t *data_ptr, uint32_t size)
 
     return 0;
 }
+
+/** @}*/

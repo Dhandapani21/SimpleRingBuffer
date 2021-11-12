@@ -145,12 +145,12 @@
     <ClCompile Include="src\console.c" />
     <ClCompile Include="src\main.c" />
     <ClCompile Include="src\ring_buffer.c" />
-    <ClCompile Include="src\trace.c" />
+    <ClCompile Include="src\print_buffer.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\console.h" />
     <ClInclude Include="header\ring_buffer.h" />
-    <ClInclude Include="header\trace.h" />
+    <ClInclude Include="header\print_buffer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

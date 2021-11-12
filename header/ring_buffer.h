@@ -1,9 +1,21 @@
+/**
+  @file ring_buffer.h
+  @brief this file provides the generic ring buffer implementation
+
+  */
+
+
 #ifndef RING_BUFFER_H
 #define RING_BUFFER_H
 
 #include <string.h>
 #include <stdint.h>
 #include <stdbool.h>
+
+/** \addtogroup ring_buffer RingBuffer
+ *  @{
+ */
+
 
 // Definitions
 #define BUFFER_ERROR                (-1)
@@ -31,5 +43,6 @@ uint32_t buffer_remaining_bytes(ring_buffer_t *buff);
 int buffer_flush(ring_buffer_t *buff);
 int buffer_init(ring_buffer_t *buff, uint8_t *data_ptr, uint32_t size);
 
+/** @}*/
 
 #endif // RING_BUFFER_H

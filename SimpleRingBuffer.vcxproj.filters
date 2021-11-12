@@ -24,7 +24,7 @@
     <ClCompile Include="src\ring_buffer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\trace.c">
+    <ClCompile Include="src\print_buffer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClInclude Include="header\ring_buffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="header\trace.h">
+    <ClInclude Include="header\print_buffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
